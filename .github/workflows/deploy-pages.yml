@@ -34,7 +34,9 @@ jobs:
       - name: Build App
         run:  |
           cd azure-arc-jumpstart-app
-          npm run deploy
+          npm ci
+          npm fetch docs
+          npm run build
   deploy:
         environment:
           name: github-pages
