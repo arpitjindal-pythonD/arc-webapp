@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/arc-webapp/static/css/main.02e8bd3c.css",
+    "main.js": "/arc-webapp/static/js/main.fcb372dd.js",
+    "static/js/787.f8ae4864.chunk.js": "/arc-webapp/static/js/787.f8ae4864.chunk.js",
+    "index.html": "/arc-webapp/index.html",
+    "main.02e8bd3c.css.map": "/arc-webapp/static/css/main.02e8bd3c.css.map",
+    "main.fcb372dd.js.map": "/arc-webapp/static/js/main.fcb372dd.js.map",
+    "787.f8ae4864.chunk.js.map": "/arc-webapp/static/js/787.f8ae4864.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.02e8bd3c.css",
+    "static/js/main.fcb372dd.js"
+  ]
+}
