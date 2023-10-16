@@ -28,17 +28,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: NPM commands
-        run: |
-         # Configure Git
-          git config user.name "GitHub Actions Bot"
-          git config user.email "arpit.jindal@protonmail.com"
-          git worktree add gh-pages gh-pages
-          rm -rf gh-pages/*
-          cp -r build/* gh-pages/
-          cd gh-pages
-          git add .
-          git commit -m "Deploy latest build to gh-pages"
-          git push origin gh-pages
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: gh-pages # Target branch to deploy to
+          folder: ./azure-arc-jumpstart-app/build # Folder (or path) containing your app's build artifacts
+          clean: true # Automatically remove old files from the deployment branch
+          token: ${{ secrets.GITHUB_TOKEN }}
   
   
