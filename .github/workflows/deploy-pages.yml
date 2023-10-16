@@ -24,8 +24,8 @@ jobs:
       - name: npm install, build, and test
         run: |
           cd azure-arc-jumpstart-app
-          npm run fetch-docs  
           npm install
+          npm run fetch-docs  
           npm run build
 
       - name: Deploy 
