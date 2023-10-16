@@ -43,6 +43,6 @@ jobs:
           branch: gh-pages # Target branch to deploy to
           folder: ./azure-arc-jumpstart-app/build # Folder (or path) containing your app's build artifacts
           clean: true # Automatically remove old files from the deployment branch
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.gh_pat }}
   
   
