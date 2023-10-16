@@ -26,12 +26,12 @@ jobs:
           cd azure-arc-jumpstart-app
           npm install
           npm run fetch-docs  
-          CI= False npm run deploy
+          npm run deploy
 
       - name: Deploy 
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
           branch: gh-pages # Target branch to deploy to
-          folder: ./azure-arc-jumpstart-app/build # Folder (or path) containing your app's build artifacts
+          folder: ./azure-arc-jumstart-app # Folder (or path) containing your app's build artifacts
           clean: true # Automatically remove old files from the deployment branch
           token: ${{ secrets.GITHUB_TOKEN }} # GitHub token, automatically provided by GitHub Actions
