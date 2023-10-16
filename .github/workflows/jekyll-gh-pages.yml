@@ -28,12 +28,18 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: NPM commands
+        run: |
+          cd azure-arc-jumpstart-app
+          npm ci
+          npm run fetch-docs
+          npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
-          source: ./azure-arc-jumpstart-app/public
+          source: ./azure-arc-jumpstart-app/
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
