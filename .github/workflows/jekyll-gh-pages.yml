@@ -1,7 +1,9 @@
-# Sample workflow for building and deploying a Jekyll site to GitHub Pages
-name: Deploy Jekyll with GitHub Pages
+name: Repository dispatch trigger and Building the app
 
 on:
+  repository_dispatch:
+    types:
+      - workflow-trigger
   # Runs on pushes targeting the default branch
   push:
     branches: ["newversion"]
@@ -32,6 +34,7 @@ jobs:
         run:  |
           cd azure-arc-jumpstart-app
           npm install
+          npm run fetch-docs
           CI=false npm run build
       - name: Configure git
         run: |
