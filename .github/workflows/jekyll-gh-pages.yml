@@ -32,7 +32,6 @@ jobs:
         run:  |
           cd azure-arc-jumpstart-app
           npm install
-          npm run fetch-docs
           CI=false npm run build
       - name: Configure git
         run: |
